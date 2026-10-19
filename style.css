@@ -476,6 +476,24 @@ p { margin: 0 0 1em; max-width: 62ch; }
 @media (prefers-reduced-motion: no-preference) { .sketch-callout { animation: fade .6s 2.2s ease both; } }
 .swatch img.brow-art { background: transparent; }
 
+/* Nano card photo: wider than the old sketch, so it stays fully visible. */
+.swatch img.brow-compare {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1830 / 380;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #faf5f2;
+  margin: .45rem 0 .9rem;
+}
+@media (min-width: 901px) {
+  /* Match the 3:1 illustrations beside it so the pencil notes still line up. */
+  .swatch img.brow-compare {
+    margin-top: calc((100% / 3 - 100% * 380 / 1830) / 2 - .1rem);
+    margin-bottom: calc((100% / 3 - 100% * 380 / 1830) / 2 + .3rem);
+  }
+}
+
 
 /* ===== New pages ===== */
 .page-faq .pencil { display: block; transform: rotate(-2deg); transform-origin: left; margin-bottom: -.4rem; }
