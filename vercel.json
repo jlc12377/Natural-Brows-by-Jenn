@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/404", "destination": "/__missing", "permanent": false },
+    { "source": "/thinning-gray-overplucked-brows", "destination": "/thinning-overplucked-brows", "permanent": true }
+  ]
 }
